@@ -41,7 +41,7 @@ function initAnimations() {
 
         tl2.to(".nav-links", {
             right: 0,
-            duration: 0.8,
+            duration: 0.3,
             ease: "power2.out"
         });
         tl2.from(".nav-links h4", {

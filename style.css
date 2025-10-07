@@ -436,6 +436,7 @@ footer i {
   .nav {
     width: 100%;
     padding: 15px 30px;
+    justify-content: space-between;
   }
   .nav i {
     display: block;
@@ -487,7 +488,7 @@ footer i {
     height: 90vh;
   }
   #page1 img{
-    width: 350px;
+    width: 200px;
   } 
   #page1 h2{
     font-size: 50px;
@@ -583,12 +584,13 @@ footer i {
     height: 35px;
     font-size: 11px;
   }
+  
   #page1 img{
-    height: 260px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
   }
   #page1 h2{
-    font-size: 32px;
+    font-size: 26px;
   }
   .swiper-slide {
     width: 140px;
