@@ -22,18 +22,19 @@ function initAnimations() {
         });
         document.addEventListener("DOMContentLoaded", function () {
           gsap.to(".nav", {
-              backgroundColor: "#8462fd",
-              height:"100px",
-              width:"100%",
-              zIndex:1,
-              duration: 0.5,
-              scrollTrigger: {
-                  trigger: "body",
-                  start: "top 1%",
-                  end: "top -30%",
-                  scrub: 1,
-              }
-          });
+            backgroundColor: "#8462fd",
+            height: "100px",
+            width: "100%",
+            zIndex: 99,  
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: "body",
+                start: "top 1%",
+                end: "top -30%",
+                scrub: 1,
+            }
+        });
+        
       });
     } else {
         // Mobile Timeline
@@ -324,6 +325,69 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   loop:true
+});
+const projects = [
+  {
+    title: "Interior Design",
+    desc: "A simple and elegant website for an interior design company, built using HTML, CSS, and JavaScript. This project showcases a clean, modern aesthetic with responsive design principles to ensure a seamless experience across all device sizes.",
+    link: "https://shaheer-naveed.github.io/Interior-Design/"
+  },
+  {
+    title: "E-Commerce",
+    desc: "An interactive e-commerce platform where users can browse products, add them to a virtual shopping cart, and manage their orders. This project demonstrates core web development concepts using HTML, CSS, Java, and PHP, along with a MySQL database for data storage and management.",
+    link: "https://art.infinityfree.me/"
+  },
+  {
+    title: "Angular App",
+    desc: "This is a simple, static E-Learning platform built using Angular, HTML, and CSS. The platform includes a homepage, course listing, and a basic layout to simulate an educational website. It does not have user authentication or dynamic features at this point, but provides a solid foundation for building more complex features.You can register yourself for listed courses.",
+    link: "https://github.com/Shaheer-Naveed/Angular-App"
+  },
+  {
+    title: "Cuberto Clone",
+    desc: "A fully responsive landing page inspired by Cuberto, built using HTML, CSS, and JavaScript. It features smooth animations, scroll interactions, and custom UI effects powered by GSAP and Shery.js.",
+    link: "https://shaheer-naveed.github.io/Cuberto-Clone/"
+  },
+  {
+    title: "Two Good Clone",
+    desc: "A clean and responsive landing page inspired by the aesthetic and interaction style of Two Good Co.. Designed with a modern UI/UX approach using HTML, CSS, and JavaScript — includes animated custom cursor, hover effects, and flexible layout for all screen sizes.",
+    link: "https://shaheer-naveed.github.io/Two-Good-Clone/"
+  }
+];
+
+// Modal Elements
+const modal = document.getElementById("projectModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDescription");
+const modalLink = document.getElementById("modalLink");
+const closeBtn = document.querySelector(".close");
+
+// Get all cards
+const cards = document.querySelectorAll(".swiper-slide");
+
+cards.forEach((card, index) => {
+  card.addEventListener("click", () => {
+    const project = projects[index];
+    modalTitle.textContent = project.title;
+    modalDesc.textContent = project.desc;
+    modalLink.href = project.link;
+
+    modal.style.display = "flex";
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  });
+});
+
+// Close modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+
+// Close on outside click
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
 });
 
 //================page5===============
