@@ -344,7 +344,13 @@ const projects = [
     title: "Two Good Clone",
     desc: "A clean and responsive landing page inspired by the aesthetic and interaction style of Two Good Co.. Designed with a modern UI/UX approach using HTML, CSS, and JavaScript — includes animated custom cursor, hover effects, and flexible layout for all screen sizes.",
     link: "https://shaheer-naveed.github.io/Two-Good-Clone/"
+  },
+  {
+    title: "CheckVehicle.info",
+    desc: "A simple and modern website for a car service business, built using WordPress with Elementor and WooCommerce. The site features a clean design, service listings, and an easy booking experience for customers.",
+    link: "https://checkvehicle.info/"
   }
+
 ];
 
 // Modal Elements
