@@ -304,28 +304,21 @@ if (Phead) {
     }
   );
 }
-
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
-  loop:true
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
 });
+
 const projects = [
   {
     title: "Interior Design",

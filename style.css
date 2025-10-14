@@ -230,35 +230,21 @@ h1 span {
   padding: 100px 0;
 }
 .swiper {
-  width: 100%;
-  padding: 50px 0;
+  position: relative;
+  margin-top: 50px;
+  width: 600px;
+  height: 300px;
 }
 .swiper-slide {
-  width: 300px;
-  height: 300px;
-  background-position: center;
-  background-size: cover;
-  border: 2px solid #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100%;
 }
-.workin {
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-.workin img {
+.swiper-slide img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.5s;
-}
-.workin:hover img {
-  transform: scale(1.1);
 }
 .layer {
   width: 100%;
@@ -303,16 +289,14 @@ h1 span {
 .icons a i{
   color: #8462fd;
 }
-.workin:hover img {
-    transform: scale(1.1);
-}
-.workin:hover .layer {
+
+.swiper-slide:hover .layer {
   height: 100%;
 }
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
-  z-index: 9999999; /* Keep above everything */
+  z-index: 9999999; 
   left: 0;
   top: 0;
   width: 100%;
@@ -456,10 +440,7 @@ footer i {
   .nav-links h4 a{
     font-size:16px;
   }
-  .swiper-slide {
-    width: 220px;
-    height: 220px;
-  }
+ 
   #page1 img{
     width: 400px;
     z-index: 2;
@@ -558,9 +539,15 @@ footer i {
     height: 40px;
     font-size: 12px;
   }
-  .swiper-slide {
-    width: 180px;
-    height: 180px;
+  .swiper {
+    width: 250px;
+    height: 250px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    transform: translateY(-100%);
   }
   .layer h3{
     font-size: 16px;
@@ -641,6 +628,11 @@ footer i {
   .swiper-slide {
     width: 140px;
     height: 140px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px;
+    height: 25px;
   }
   .layer .icons a {
     width: 35px;
