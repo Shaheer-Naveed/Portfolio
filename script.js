@@ -346,9 +346,9 @@ const projects = [
     link: "https://shaheer-naveed.github.io/Two-Good-Clone/"
   },
   {
-    title: "CheckVehicle.info",
+    title: "VehicleInspection",
     desc: "A simple and modern website for a car service business, built using WordPress with Elementor and WooCommerce. The site features a clean design, service listings, and an easy booking experience for customers.",
-    link: "https://checkvehicle.info/"
+    link: "https://vehicleinspection.online/"
   }
 
 ];
